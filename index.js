@@ -26,7 +26,14 @@ http_server_app.use("/API/student", require("./controllers/student.contoller"))
 
 //      all server status
 http_server_app.all("/", (req, res) => {
-    return res.status(200).json({
-        message: "Request successful"
-    })
+    try {
+        return res.status(200).json({
+            message: "Request successful",
+        })
+    } catch (error) {
+        return res.status(400).json({
+            message: "Error in requests",
+            error:error.message
+        })
+    }
 })
