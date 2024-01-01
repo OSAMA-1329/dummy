@@ -1,40 +1,15 @@
-WEB DEVELOPER TASK
-Mentor and Student Assigning with Database
+Live API URL -  https://assign-mentor-hdew.onrender.com
 
-TASK: 
-Write API to create Mentor
-Write API to create Student
-Write API to Assign a student to Mentor
-Select one mentor and Add multiple Student 
-A student who has a mentor should not be shown in List
-Write API to Assign or Change Mentor for particular Student
-Select One Student and Assign one Mentor
-Write API to show all students for a particular mentor
-Write an API to show the previously assigned mentor for a particular student.
+API comments are given below:-
 
-TASK DETAILS:
-How to write an API?
-Create an Express server.
-Create an endpoint and write your logic.
-Use the API in the front-end for sending data and receiving data to/from the server.
+Mentor route -   ("/API/mentor")
+Student route -  ("/API/student")
 
-2. Any specifications and constraints?
-Back-End: Node Js
-Database: MongoDB
-
-3. How do I submit my work?
-Push all your work files to your Github(https://github.com/) 
-URL format has to be followed for both Github and Render.
-https://github.com/username/assign-mentor
-Deploy your server in Render(https://render.com/).
-Submit your task in the portal.
-
-4. Any basic hints to solve?
-https://expressjs.com/
-
-5. Terms and Conditions?
-You agree to not share this confidential document with anyone. 
-You agree to open-source your code (it may even look good on your profile!). Do not mention our company’s name anywhere in the code.
-We will never use your source code under any circumstances for any commercial purposes; this is just a basic assessment task. 
-
-NOTE: Any violation of Terms and conditions is strictly prohibited. You are bound to adhere to it.
+1. get all mentors -  get("/") 
+2. get all students -  get("/") 
+3. Create a new mentor -  post("/create") 
+4. Create a new Student -  post("/create") 
+5. assign a student to mentor -  (put("/assign/:id") 
+6. assign or change mentor for particular student -  (put("/AssignorChange/:id") 
+7. show all students for particular mentor  -   (get("/:id") 
+8. show the previously assigned mentor for a particular student -  (get('/previousMentor/:id') 
