@@ -3,7 +3,7 @@ const Studentmodels = require('../models/student.model');
 const mongoose = require("mongoose");
 
 
-//  get all mentor and student data's
+//  get all students
 async function GET_ALL_STUDENTS(req, res) {
     try {
         await Studentmodels.find().then((response) => {
@@ -35,7 +35,7 @@ async function GET_ALL_STUDENTS(req, res) {
     }
 }
 
-//  get all mentor and student data's
+//  get all mentors
 async function GET_ALL_MENTORS(req, res) {
     try {
         await Mentormodels.find().then((response) => {
@@ -67,7 +67,7 @@ async function GET_ALL_MENTORS(req, res) {
     }
 }
 
-//      get all mentor data's
+//      Create a new mentor
 async function CREATE_NEW_MENTOR(req, res) {
     try {
         const newMentor = new Mentormodels(req.body);
@@ -96,7 +96,7 @@ async function CREATE_NEW_MENTOR(req, res) {
     }
 }
 
-//      get all student data's
+//      Create a new student
 async function CREATE_NEW_STUDENT(req, res) {
     try {
         const newStudent = new Studentmodels(req.body)
@@ -231,7 +231,6 @@ async function SHOW_ALL_STUDENTS(req, res) {
 }
 
 //   show the previously assigned mentor for a particular student
-
 async function PREVIOUS_MENTOR(req, res) {
     try {
         const { id } = req.params;
