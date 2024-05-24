@@ -5,7 +5,7 @@ API comments are given below:-
 Mentor route -   ("/API/mentor")
 Student route -  ("/API/student")
 
-1. get all mentors -  get("/") 
+1. get all mentors -  get("/")    
 2. get all students -  get("/") 
 3. Create a new mentor -  post("/create") 
 4. Create a new Student -  post("/create") 
